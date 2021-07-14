@@ -1,0 +1,128 @@
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@font-face {
+    font-family: elianto;
+    src: url(../fonts/Elianto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/HelveticaNeue-CondensedBold.ttf);
+}
+
+@font-face {
+    font-family: Helveticalight;
+    src: url(../fonts/HelveticaNeueUltraLight.ttf);
+}
+
+@font-face {
+    font-family: elianto;
+    src: url(../fonts/Elianto-Regular.ttf);
+}
+
+:root {
+    --main-text-color: rgb(13, 9, 49);
+}
+
+.abouttextbold {
+    font-weight: bolder;
+    font-size: 8.4em;
+    text-transform: uppercase;
+    mix-blend-mode: difference !important;
+    display: inline-block;
+    color: var(--main-text-color)
+}
+
+
+
+.abouttextlight {
+    font-family: Helveticalight;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    mix-blend-mode: difference !important;
+    color: var(--main-text-color)
+}
+
+.abouttextlight {
+    padding: 0%;
+    padding-bottom: 10%;
+}
+
+
+/* .headertextlight.animate {
+    transform: scaleX(1);
+} */
+
+.abouttextbold::after {
+    content: "";
+    background: rgb(0, 0, 0);
+    position: relative;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: 10px;
+    display: block;
+    animation: transLinear 2.8s cubic-bezier(.25, .46, .45, .94) 0.4s;
+}
+
+.abouttextlight::after {
+    content: "";
+    background: rgb(0, 0, 0);
+    position: relative;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: 10px;
+    display: block;
+    animation: transLinear 2.8s cubic-bezier(.25, .46, .45, .94) 0.4s;
+}
+
+@keyframes transLinear {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-direction: column;
+    height: 100% !important;
+}
+
+
+/* small desktop */
+
+@media (min-width:900px) and (max-width:1400px) {
+    .abouttextbold {
+        font-size: 6.4em;
+    }
+    .abouttextlight {
+        padding-bottom: 30%;
+        font-size: 1.1em;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width:900px) {
+    .abouttextbold {
+        font-size: 3.5em;
+    }
+    .abouttextlight {
+        padding-bottom: 25%;
+        font-size: 1.1em;
+    }
+}
+
+/* .about-video {
+    height: 100%;
+} */

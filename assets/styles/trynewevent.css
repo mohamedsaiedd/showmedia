@@ -1,0 +1,316 @@
+:root {
+    --main-text-color: rgb(13, 9, 49);
+}
+
+.menu {
+    padding-top: 10%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    --marquee-width: 100vw;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+    --item-font-size: 10vw;
+    counter-reset: menu;
+}
+
+.menu__item {
+    cursor: default;
+    position: relative;
+    padding: 0vw;
+}
+
+.menu__item-link {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    -webkit-text-stroke: 1.5px var(--main-text-color);
+    text-stroke: 1.5px var(--main-text-color);
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+    transition: opacity 0.4s;
+}
+
+.menu__item-link::before {
+    all: initial;
+    font-family: sofia-pro, sans-serif;
+    counter-increment: menu;
+    content: counter(menu);
+    position: absolute;
+    bottom: 60%;
+    left: 0;
+    pointer-events: none;
+}
+
+.menu__item-link:hover {
+    transition-duration: 0.1s;
+    opacity: 0;
+}
+
+.menu__item-img {
+    pointer-events: none;
+    position: absolute;
+    height: 20vh !important;
+    max-height: 400px;
+    opacity: 0;
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
+}
+
+.menu__item-link:hover+.menu__item-img {
+    opacity: 1;
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+    transition: all 0.4s;
+}
+
+
+/* Make sure 3 items are visible in the viewport by setting suitable font size. */
+
+.marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--marquee-width);
+    pointer-events: none;
+    mix-blend-mode: color-burn;
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.menu__item-link:hover~.marquee .marquee__inner {
+    animation-play-state: running;
+    opacity: 1;
+    transition-duration: 0.4s;
+}
+
+.marquee span {
+    text-align: center;
+}
+
+.menu__item-link,
+.marquee span {
+    white-space: nowrap;
+    font-size: var(--item-font-size);
+    padding: 0 1vw;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.marquee span {
+    font-style: italic;
+    mix-blend-mode: difference !important;
+    color: var(--main-text-color);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
+@media screen and (min-width: 53em) {
+    .frame {
+        text-align: left;
+        display: grid;
+        align-content: space-between;
+        width: 100%;
+        padding: 2.5rem 6vw;
+        pointer-events: none;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: auto;
+    }
+    .frame__title-wrap {
+        display: flex;
+        align-items: start;
+    }
+    .frame__info {
+        margin: 0;
+    }
+    .frame__title {
+        margin: 0 1rem 0 0;
+    }
+    .frame__links {
+        padding: 0;
+        justify-self: end;
+    }
+    .frame a {
+        pointer-events: auto;
+    }
+}
+
+body {
+    cursor: none;
+}
+
+.shapes {
+    position: relative;
+    background: #2128bd;
+}
+
+.shape {
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape.shape-1 {
+    background: #005ffe;
+    width: 650px;
+    height: 650px;
+    margin: -325px 0 0 -325px;
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+}
+
+.shape.shape-2 {
+    background: #ffe5e3;
+    width: 440px;
+    height: 440px;
+    margin: -220px 0 0 -220px;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+}
+
+.shape.shape-3 {
+    background: #ffcc57;
+    width: 270px;
+    height: 270px;
+    margin: -135px 0 0 -135px;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+
+.content {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.cursor {
+    position: fixed;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: color-burn;
+}
+
+.cursor img {
+    width: 50px;
+    height: 50px;
+    animation: rotate 4s linear infinite;
+    pointer-events: none;
+    margin: -10px 0 0 -10px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+ ::-moz-selection {
+    color: #fff;
+    background: #2128bd;
+}
+
+ ::selection {
+    color: #fff;
+    background: #2128bd;
+}
+
+
+/* try */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900");
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 999;
+    font-family: Montserrat;
+    background: var(--main-text-color);
+    animation: mymove 2s alternate infinite;
+}
+
+@keyframes mymove {
+    from {
+        background-color: rgb(0, 0, 0);
+    }
+    to {
+        background-color: rgb(13, 9, 49);
+    }
+}
+
+.preloader__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    bottom: 210px !important;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 0px !important;
+}
+
+.preloader__container h5 {
+    letter-spacing: 1rem;
+    text-align: center;
+    padding-top: 0px !important;
+}
+
+.preloader__container__percent {
+    font-size: 175px;
+    font-weight: 900;
+}
+
+.preloader__container__preload {
+    display: flex;
+}
+
+.preloader__container__preload__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+/* .preload * {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important;
+} */

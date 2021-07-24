@@ -23,28 +23,38 @@
     --main-text-color: rgb(13, 9, 49);
 }
 
+::selection {
+    color: white;
+    background: var(--main-text-color);
+}
+
 * {
-    margin: 0%;
-    padding: 0%;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
+
 html {
-    margin: 0 ;
-    height: 100%; 
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    width: 100%;
 }
+
 body {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     font-family: Helvetica;
     overflow-x: hidden;
     background-color: #cacaca;
-    
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 450%;
+    height: 100vh;
     overflow: hidden;
     background: rgb(255, 255, 255);
     z-index: -1
@@ -54,7 +64,7 @@ body {
     content: "";
     position: absolute;
     width: 200vw;
-    height: 1000vh;
+    height: 200vh;
     left: -50%;
     top: -50%;
     opacity: 0.2;
@@ -253,15 +263,15 @@ nav .close:hover div::after {
 .headertextbold {
     font-weight: bolder;
     font-size: 8.4em;
-    color: var(--main-text-color) ;
+    color: var(--main-text-color);
     text-transform: uppercase;
     mix-blend-mode: difference !important;
 }
-.headertextboldspan {
 
+.headertextboldspan {
     color: rgba(0, 0, 0, 0) !important;
     -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--main-text-color);
+    -webkit-text-stroke-color: var(--main-text-color);
 }
 
 .headertextbold {
@@ -322,6 +332,7 @@ nav .close:hover div::after {
     align-content: flex-start;
     flex-direction: column;
     height: 100vh;
+    mix-blend-mode: color-burn !important;
 }
 
 
@@ -340,20 +351,35 @@ nav .close:hover div::after {
 }
 
 
+/* fix bug for header expanded */
+
+@media (min-width:900px) and (max-width:1000px) {
+    .headertextbold {
+        font-size: 5.4em;
+    }
+}
+
+
 /* mobile */
 
 @media (max-width:900px) {
-    .headertextbold {
-        font-size: 3.5em;
-    }
     .container {
         padding: 0% 7%;
     }
     .headertextlight {
         padding-bottom: 50%;
     }
+    .headertextbold {
+        font-size: 3.5em;
+    }
 }
 
 .background {
     padding-bottom: 20%;
+}
+
+@media (min-width:1400px) and (max-width:1720px) {
+    .headertextbold {
+        font-size: 6.4em;
+    }
 }

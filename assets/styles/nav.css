@@ -15,22 +15,24 @@ a {
 .card-list>article {
     margin-left: -20px !important;
     overflow-x: scroll;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    opacity: 0.4 !important;
+}
+
+.card-list>article:hover {
+    filter: blur(0px) !important;
+    background-image: linear-gradient(to top, rgb(177, 48, 9), rgba(255, 255, 255, 0));
+    opacity: 1 !important;
 }
 
 .cards {
     height: 540px;
-    background-color: rgba(19, 19, 19, 0.5);
-    backdrop-filter: blur(5px);
-    background-image: linear-gradient(rgba(32, 32, 32, 0), rgb(0, 0, 0));
-    width: 100%;
 }
 
-@media(min-width:1000px) {
-    .cards {
-        height: 550px;
-        background-color: rgba(195, 26, 26, 0.5);
-        backdrop-filter: blur(5px);
-    }
+.cards {
+    height: 550px;
+    background-color: rgba(195, 26, 26, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .card-list::-webkit-scrollbar {
@@ -38,7 +40,7 @@ a {
 }
 
 .card-list::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: #00000000;
 }
 
 .card2 {
@@ -47,7 +49,6 @@ a {
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
-    background: #17141d;
     box-shadow: -1rem 0 3rem #000;
     display: flex;
     flex-direction: column;
@@ -56,7 +57,6 @@ a {
     scroll-snap-align: start;
     clear: both;
     position: relative;
-    background: linear-gradient(rgb(155, 65, 13), #9e7911, rgb(116, 91, 11));
     object-fit: cover;
 }
 
@@ -136,6 +136,13 @@ a {
     color: #fff;
 }
 
+canvas {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+}
+
 .card2 {
     overflow: hidden !important;
 }
@@ -152,77 +159,80 @@ nav::-webkit-scrollbar-thumb {
     background-color: rgba(204, 132, 16, 0);
 }
 
+.card-list .card2:hover {
+    opacity: 1 !important;
+}
+
+.showin {
+    display: none;
+}
+
+.cursor img {
+    transition: all 0.4s ease !important;
+}
+
 
 /* cards  */
 
 .card2:nth-child(1) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/akher.jpg');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/kaza.jpg');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(3) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/no1.png');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(4) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/mn 30 years.jpg');
     background-size: cover;
     width: 100%;
 }
 
-.card2:nth-child(5) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/as3d.jpg');
+.card2:nth-child(5):hover {
     background-size: cover;
     width: 100%;
+    background-image: linear-gradient(to top, rgb(177, 48, 9), rgba(255, 255, 255, 0));
 }
 
-.card2:nth-child(6) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/Tesb7 3la kher.jpg');
+.card2:nth-child(6):hover {
     background-size: cover;
     width: 100%;
+    background-image: linear-gradient(to top, rgb(73, 9, 177), rgba(255, 255, 255, 0));
 }
 
-.card2:nth-child(7) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images//no1.png');
+.card2:nth-child(7):hover {
     background-size: cover;
     width: 100%;
+    background-image: linear-gradient(to top, rgb(177, 9, 65), rgba(255, 255, 255, 0));
 }
 
 .card2:nth-child(8) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/king.jpg');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(9) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/akher.jpg');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(10) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/kaza.jpg');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(11) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/no1.png');
     background-size: cover;
     width: 100%;
 }
 
 .card2:nth-child(12) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../images/mn 30 years.jpg');
     background-size: cover;
     width: 100%;
 }
@@ -305,3 +315,70 @@ path {
         transform: rotate(360deg);
     }
 }
+
+* {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* 
+.animatedbg {
+    position: absolute;
+    z-index: -10000 !important;
+}
+
+.animatedbg .row {
+    display: inline-block;
+    position: relative;
+    padding: 0% 0;
+    top: -2300px;
+    transform: rotate(-30deg);
+    white-space: nowrap;
+}
+
+.animatedbg img {
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.animatedbg img:hover {
+    filter: grayscale(0%);
+}
+
+.animatedbg .row div {
+    animation: animatedbg1 88s linear infinite;
+    animation-delay: -280s;
+}
+
+.animatedbg .row div:nth-child(2) {
+    animation: animatedbg2 80s linear infinite;
+    animation-delay: -140s;
+}
+
+.animatedbg .row div:nth-child(3) {
+    animation: animatedbg2 80s linear infinite;
+    animation-delay: 200s;
+    position: absolute;
+}
+
+@keyframes animatedbg1 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animatedbg2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(200%);
+    }
+} */

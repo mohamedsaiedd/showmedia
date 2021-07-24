@@ -32,14 +32,12 @@
     color: var(--main-text-color)
 }
 
-
-
 .abouttextlight {
     font-family: Helveticalight;
     font-weight: bolder;
     font-size: 1.5em;
     color: var(--main-text-color);
-    text-transform: uppercase;
+    text-transform: capitalize;
     mix-blend-mode: difference !important;
     color: var(--main-text-color)
 }
@@ -102,7 +100,7 @@
 
 @media (min-width:900px) and (max-width:1400px) {
     .abouttextbold {
-        font-size: 6.4em;
+        font-size: 5.4em;
     }
     .abouttextlight {
         padding-bottom: 30%;
@@ -118,11 +116,15 @@
         font-size: 3.5em;
     }
     .abouttextlight {
-        padding-bottom: 25%;
-        font-size: 1.1em;
+        padding-bottom: 30%;
+        font-size: 1em;
     }
 }
+
 
 /* .about-video {
     height: 100%;
 } */
+
+
+

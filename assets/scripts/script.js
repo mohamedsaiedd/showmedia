@@ -39,8 +39,13 @@ TweenMax.from(".text h3 .hidetext", 1.5, {
 
 
 
+let m = new MagnetMouse({
+    magnet: {
+        element: '.magnet'
+    }
+});
 
-
+m.init();
 
 
 // anime({

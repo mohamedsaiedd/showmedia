@@ -34,6 +34,11 @@ class Webgl {
                 switch (idx) {
                     case 0:
                         this.uniforms.uTexture.value = textureOne;
+
+                        break;
+                    case 1:
+                        this.uniforms.uTexture.value = textureFour;
+
                         break;
                     case 2:
                         this.uniforms.uTexture.value = textureTwo;
@@ -83,7 +88,8 @@ class Webgl {
                 }
             })
         })
-        this.addEventListeners(document.querySelector('.card-list'));
+        let cardss = document.querySelectorAll('.card-list .card2');
+        this.addEventListeners(cardss);
         this.setupCamera();
         this.onMouseMove();
         this.createMesh();
@@ -101,19 +107,39 @@ class Webgl {
             height,
             aspectRatio
         }
+    };
+
+    // addEventListeners(element) {
+    //     element.addEventListener('mouseenter', () => {
+    //         this.cardsHover = true;
+    //     })
+    //     element.addEventListener('mouseleave', () => {
+    //         this.cardsHover = false;
+    //     })
+    // }
+
+
+    addEventListeners(e) {
+        let cardss = document.querySelectorAll('.card-list .card2');
+        cardss.forEach(card => {
+
+            card.addEventListener("mouseenter", (ele) => {
+                this.cardsHover = true
+
+            })
+            card.addEventListener("mouseleave", () => {
+                this.cardsHover = false
+            })
+        })
     }
 
 
 
 
-    addEventListeners(element) {
-        element.addEventListener('mouseenter', () => {
-            this.cardsHover = true;
-        })
-        element.addEventListener('mouseleave', () => {
-            this.cardsHover = false;
-        })
-    }
+
+
+
+
 
     setupCamera() {
 
@@ -143,7 +169,7 @@ class Webgl {
         this.sizes.set(270, 390, 1);
         this.mesh.scale.set(this.sizes.x, this.sizes.y, 1);
 
-        this.mesh.position.set(this.offset.x, this.offset.y, 0);
+        // this.mesh.position.set(this.offset.x, this.offset.y, 0);
 
         this.scene.add(this.mesh);
     }
@@ -178,18 +204,21 @@ class Webgl {
 
         for (let i = 0; i < this.cards.length; i++) {
             if (this.cardsHover) {
-                this.cards[i].style.opacity = 0.2
+                this.cards[i].style.opacity = 0.1
+
+
             } else {
                 this.cards[i].style.opacity = 1
             }
 
 
         }
-
+        this.renderer.domElement.id = 'canvasid';
         this.renderer.render(this.scene, this.camera);
         window.requestAnimationFrame(this.render.bind(this));
 
     }
+
 }
 
 

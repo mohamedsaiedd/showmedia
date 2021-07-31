@@ -1,19 +1,19 @@
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import url(https://db.onlinewebfonts.com/c/ab83b275830b2d585ea027c47e3b237a?family=GraphiqueW09-bold);
+
+
 @font-face {
-    font-family: elianto;
-    src: url(../fonts/Elianto-Regular.ttf);
+    font-family: cocbold;
+    src: url(../fonts/Coconat-BoldExt.otf);
 }
 
 @font-face {
-    font-family: Helvetica;
-    src: url(../fonts/HelveticaNeue-CondensedBold.ttf);
+    font-family: cocreg;
+    src: url(../fonts/Coconat-Regular.otf);
 }
-
-@font-face {
-    font-family: Helveticalight;
-    src: url(../fonts/HelveticaNeueUltraLight.ttf);
+body {
+    font-family: cocbold;
 }
-
 :root {
     --main-text-color: rgb(13, 9, 49);
     --offset: 20vw;
@@ -27,11 +27,13 @@
     flex-direction: column;
     margin: 0 auto;
     height: 320px;
-    overflow-y: scroll;
     width: 100%;
     overflow-x: hidden;
     transition: all 0.4s ease-in;
     scrollbar-width: none;
+    
+    
+
 }
 
 .backword {
@@ -42,33 +44,35 @@
     position: fixed;
     font-size: 4rem;
 }
-
+/* 
 .accordion-overlayer {
     content: "";
     position: absolute;
     width: 120%;
     height: 320px;
     opacity: 1;
-    background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+    background-image: linear-gradient(180deg, rgb(255, 255, 255), #ffffff);
     pointer-events: none;
     overflow: hidden;
     padding: 0 !important;
     margin: 0 !important;
     left: 0;
-}
-
-.accordion-overlayer::after {
+    
+} */
+/* 
+.accordion-overlayer::after
+{
     content: "";
     position: absolute;
     width: 200vw;
-    height: 50vh;
     left: -50%;
     top: -50%;
-    padding-top: 50%;
+    padding-top: 100%;
     opacity: 0.2;
     background-image: url(../images/noise.png);
+
     animation: grain 0.2s steps(2) infinite;
-}
+} */
 
 @keyframes grain {
     0%,
@@ -106,18 +110,20 @@
     margin-top: 1rem;
     cursor: pointer;
     color: var(--main-text-color);
-    border-bottom: 0.4px solid rgba(0, 0, 0, 0.11);
+    border-bottom: 0.4px solid rgba(0, 0, 0, 0.048);
     margin: 0;
+   
+
 }
 
 .one-new::after {
     content: "";
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0);
     position: relative;
     height: 1px;
     width: 0%;
     display: block;
-    opacity: 0.2;
+    opacity: 0;
 }
 
 .new-header {
@@ -126,7 +132,7 @@
     align-items: center;
     font-size: 0.9rem;
     font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cocbold;
 }
 
 .new-expanded {
@@ -139,7 +145,8 @@
 .new-expanded p {
     font-size: 0.9rem;
     padding-top: 0.5rem;
-    font-family: Helveticalight;
+    font-family: cocreg;
+  
 }
 
 .one-new.active .new-expanded {
@@ -150,6 +157,7 @@
 
 .one-new.active {
     z-index: 9;
+    
 }
 
 .new-header i {
@@ -161,9 +169,47 @@
     transform: rotate(-160deg);
 }
 
-.one-new:hover::after {
-    animation: transLinear .8s cubic-bezier(.25, .46, .45, .94);
+.link-new {
+    cursor: pointer;
+   font-family: Bely;
+   
 }
+.link-new:hover {
+    position: relative;
+}
+.link-new::before,
+.link-new::after {
+   
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link-new::before {
+    content: '';
+    /* show by default */
+}
+
+.link--metis--new::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform .7s;
+}
+
+.link--metis--new:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+    background: #000000;
+
+}
+
+/* .one-new:hover::after {
+    animation: transLinear .8s cubic-bezier(.25, .46, .45, .94);
+} */
 
 @keyframes transLinear {
     0% {
@@ -181,7 +227,7 @@
     font-size: 8.4em;
     display: flex;
     width: 100%;
-    font-family: Helvetica;
+    font-family: cocbold;
     margin-top: 3rem;
     line-height: .8em;
     text-transform: uppercase;
@@ -221,14 +267,14 @@
 }
 
 .get-in-bold {
-    font-family: Helveticalight;
+    font-family: cocbold;
     font-weight: 900 !important;
     text-decoration: none;
     color: #000;
 }
 
 .get-in-bold:hover {
-    font-family: Helvetica;
+    font-family: cocbold;
     font-weight: 100 !important;
     overflow: hidden;
 }
@@ -238,10 +284,10 @@
 
 @media (min-width:900px) and (max-width:1400px) {
     .news-section-title {
-        font-size: 6.4em;
+        font-size: 2.4em;
     }
     .get-in-touch-section-header {
-        font-size: 6.4em;
+        font-size: 2.4em;
     }
 }
 
@@ -264,17 +310,52 @@
     cursor: pointer;
     color: #00000000;
     font-size: 2.3em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cocreg;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--main-text-color);
 }
 
 .get-in-touch-section-social-media .social i:hover {
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
     font-weight: 900;
     color: var(--main-text-color);
     -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: var(--main-text-color);
+}
+
+.link {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    white-space: nowrap;
+    color: var(--color-text);
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+    /* show by default */
+}
+
+.link--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
 }
 
 
@@ -282,7 +363,7 @@
 
 @media (max-width:900px) {
     .news-section-title {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
     .get-in-touch-section {
         display: flex;
@@ -296,7 +377,7 @@
         width: 100% !important;
     }
     .get-in-touch-section-header {
-        font-size: 6.4em;
+        font-size: 2.4em;
     }
     .get-in-touch-section-email {
         padding-left: 0px !important;
@@ -320,12 +401,6 @@
     color: #000;
 }
 
-.get-in-touch-section-header span {
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--main-text-color);
-    width: 100%;
-}
 
 .get-in-touch-section {
     display: flex;
@@ -369,7 +444,7 @@
     border: none;
     background-color: transparent;
     border-bottom: 2px solid #000;
-    font-family: Helveticalight;
+    font-family: cocreg;
     font-weight: 900;
     padding: 6px 2px;
     display: flex;
@@ -378,7 +453,7 @@
 }
 
 .get-in-touch-section-social-media {
-    font-family: Helveticalight;
+    font-family: cocreg;
     font-weight: 900;
     display: flex;
     justify-content: space-between;
@@ -401,24 +476,24 @@
     /* border-top: 2px solid #000; */
     justify-content: space-between;
     padding: 10px 0px;
+    font-size: 0.7rem;
 }
 
 .footer-section .privacypolicypart {
-    font-family: Helveticalight;
-    font-weight: 900;
+    font-family: cocreg;
+    font-weight: 100;
     text-decoration: underline;
     cursor: pointer;
 }
 
 .footer-section .meightpart {
-    font-family: Helveticalight;
-    font-weight: 900;
+    font-family: cocreg;
+    font-weight: 100;
 }
 
 .footer-section .meightpart span {
-    font-family: Helveticalight;
+    font-family: cocbold;
     text-decoration: underline;
-    font-weight: bolder !important;
     cursor: pointer;
 }
 
@@ -435,10 +510,10 @@
     transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
 }
 
-.one-new:hover .menu__item-img {
+/* .one-new:hover .menu__item-img {
     opacity: 1;
     -webkit-transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
     transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
     -webkit-transition: all 0.4s;
     transition: opacity 0.4s;
-}
+} */

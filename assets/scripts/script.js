@@ -1,3 +1,4 @@
+
 const open = document.querySelector('.bars');
 const close = document.querySelector('.close');
 var tl = gsap.timeline({ defaults: { duration: 0.4, ease: 'easeIn' } });
@@ -57,6 +58,7 @@ m.init();
 // });
 
 const curs = document.querySelector('.cursor img')
+ 
 close.addEventListener('click', () => {
     tl.reverse();
     enableScroll()
@@ -214,29 +216,6 @@ expanded.forEach(expand => {
 
 
 
-// cusror
-
-
-window.addEventListener("mousemove", evt => {
-    const mouseX = evt.clientX;
-    const mouseY = evt.clientY;
-
-    gsap.set(".cursor", {
-        x: mouseX,
-        y: mouseY,
-        stagger: -0.1,
-        scrub: 8
-    });
-
-
-    gsap.to(".shape", {
-        x: mouseX,
-        y: mouseY,
-        stagger: -1.1,
-        scrub: 9
-    });
-
-});
 
 
 
@@ -292,3 +271,44 @@ const loaderTimer = setInterval(function() {
 
     }
 }, 55);
+
+
+
+// remove video glitsh on click
+
+const videoglitch= document.querySelector('.glitch');
+const imageglitch= document.querySelectorAll('.glitch .img');
+
+imageglitch.forEach(image => { 
+    videoglitch.addEventListener('click' , () => {
+        image.style.display = "none"
+        
+    })
+}) 
+imageglitch.forEach(image => { 
+    videoglitch.addEventListener('touchmove' , () => {
+        image.style.display = "none"
+        
+        
+    })
+}) 
+
+// cusror
+
+const vidcurs = document.querySelector('.videoCursour');
+const videoelement = document.querySelector('#my-video');
+const windowcurs = document.querySelector('.cursor');
+
+videoelement.addEventListener("mouseenter", evt => {
+    videoelement.addEventListener('mousmove' , e => {
+        const mouseX = evt.clientX;
+        const mouseY = evt.clientY;
+        vidcurs.style.top = mouseY + "px"
+        vidcurs.style.left = mouseX + "px"
+        console.log('hi')
+    })
+   
+    
+});
+
+

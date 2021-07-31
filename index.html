@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 
 
@@ -26,6 +28,8 @@
             <h5>percent</h5>
         </div>
     </div> -->
+    <div class="videoCursour"></div>
+
     <div class="cursor"> <img src="./assets/images/filmreel.png"></div>
     <!-- <div class="shapes">
         <div class="shape shape-1"></div>
@@ -57,14 +61,12 @@
             </section>
             <div class="card-list">
                 <div class="backword">
-
                 </div>
-
-                <div class="backwordVideo">
+                <!-- <div class="backwordVideo">
                     <video autoplay muted id="my-video" class="video-js vjs-fill vjs-theme-city" preload="auto" poster="./assets/images/mn 30 years.jpg">
                         <source src="./sample_1280x720_surfing_with_audio.mp4" type="video/mp4" />
                       </video>
-                </div>
+                </div> -->
 
                 <article class="card2 ">
                     <header class="card-header">
@@ -295,38 +297,44 @@
     <section class="container">
         <!-- home header section -->
         <div class="homeHeader ">
-            <p class="headertextbold">FANS MAKE IT POSSIBLE , AND WE HAVE THE DATA TO PROVE IT.</p>
+            <p class="headertextbold ">FANS MAKE IT POSSIBLE , AND WE HAVE THE DATA TO PROVE IT.</p>
             <p class="headertextlight">FANS MAKE IT POSSIBLE, AND WE HAVE THE DATA TO PROVE IT.FANS MAKE IT POSSIBLE, AND WE HAVE THE DATA TO PROVE IT.</p>
         </div>
         <!-- about section  -->
         <div class="about">
-            <p class="abouttextbold ">about</p>
-            <p class="abouttextlight">Show Media Production, founded in 2020 and based in Egypt is an artistic and media production implementation company, and participated in the implementation of more than 100 projects, from films, series, theater, advertising and awareness
+            <p data-aos="fade-in"  class="abouttextbold content__title">about</p>
+            <p data-aos="fade-in"  class="abouttextlight">Show Media Production, founded in 2020 and based in Egypt is an artistic and media production implementation company, and participated in the implementation of more than 100 projects, from films, series, theater, advertising and awareness
                 campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media
                 production, The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to
                 facilitate the production process, whatever the volume of the production.</p>
         </div>
-        <div class="about-video">
-            <video id="my-video" class="video-js vjs-fill vjs-theme-city" controls preload="auto" poster="./assets/images/mn 30 years.jpg">
+        <div class="about-video glitch">
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            
+           
+            <video data-aos="fade-in"  id="my-video" class="video-js vjs-fill vjs-theme-city" controls preload="auto" poster="./assets/images/mn30years.jpg">
                 <source src="./sample_1280x720_surfing_with_audio.mp4" type="video/mp4" />
               </video>
         </div>
 
 
         <!-- news accordion section -->
-        <h3 class="news-section-title">
+        <h3 data-aos="fade-in"  class="news-section-title content__title">
             news & events
         </h3>
 
-        <div class="accordion-news">
+        <div data-aos="fade-in"  class="accordion-news">
             <div class="  accordion-overlayer"></div>
-            <div class="one-new">
-                <div class="new-header">
+            <div class="link-new link--metis--new one-new ">
+                <div class="new-header ">
                     <h3>
                         show media production
                     </h3>
                     <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <!-- <img class="menu__item-img" src="./assets/images/kaza.jpg" /> -->
 
                 </div>
                 <div class="new-expanded">
@@ -339,7 +347,7 @@
                 </div>
             </div>
 
-            <div class="one-new">
+            <div class="link-new link--metis--new one-new">
                 <div class="new-header">
                     <h3>
                         mohamed ramdan
@@ -356,7 +364,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class="link-new link--metis--new one-new">
                 <div class="new-header">
                     <h3>
                         akla2na show
@@ -373,7 +381,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class="link-new link--metis--new one-new">
                 <div class="new-header">
                     <h3>
                         m eight vs mahmoud el shiekh
@@ -390,7 +398,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class=" link-new link--metis--new one-new">
 
                 <div class="new-header">
                     <h3>
@@ -408,7 +416,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class=" link-new link--metis--new one-new">
                 <div class="new-header">
                     <h3>
                         sho media
@@ -425,7 +433,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class="link-new link--metis--new one-new">
 
                 <div class="new-header">
                     <h3>
@@ -443,7 +451,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class="link-new link--metis--new one-new">
 
                 <div class="new-header">
                     <h3>
@@ -461,7 +469,7 @@
                     </p>
                 </div>
             </div>
-            <div class="one-new">
+            <div class="link-new link--metis--new one-new">
 
                 <div class="new-header">
                     <h3>
@@ -550,12 +558,12 @@
  -->
 
 
-        <p class="get-in-touch-section-header">get in<br><span>touch</span> </p>
+        <p data-aos="fade-in"  class="get-in-touch-section-header content__title">get in<br><span>touch</span> </p>
         <!-- get-in-touch-section -->
-        <div class="get-in-touch-section">
+        <div data-aos="zoom-in-up" class="get-in-touch-section">
             <div class="get-in-touch-section-social-media">
                 <p>
-                    14 Al-Ahrar st. from Battal Ahmed AbdElaziz - 3rd floor - flat 3 - Dokki - Giza Government - Egypt<br><a href="./index.html" class="get-in-bold"> Get Directions</a>
+                    14 Al-Ahrar st. from Battal Ahmed AbdElaziz - 3rd floor - flat 3 - Dokki - Giza Government - Egypt<br><a href="./index.html" class=" link link--metis get-in-bold"> Get Directions</a>
                 </p>
                 <p>
                     +20233380907
@@ -578,15 +586,16 @@
         </div>
 
         <div class="get-in-touch-section-social-media">
-            <div class="social">
-                <i class="">FACEBOOK</i>
+            <div class=" social" data-aos="zoom-in-up">
+                <i class="link link--metis">FACEBOOK</i>
                 <i class="">INSTAGRAM</i>
                 <i class="">YOUTUBE</i>
                 <i class="">VIMEO</i>
                 <i class="">LINKEDIN</i>
             </div>
         </div>
-        <div class="footer-section">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"   class="footer-section">
             <p class="privacypolicypart">
                 privacy and policy
             </p>
@@ -606,8 +615,11 @@
     <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/cardsthree.js"></script>
-    <script src="assets/scripts/smoothscroll.js"></script>
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 

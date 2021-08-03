@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/styles/about.css">
     <link rel="stylesheet" href="./assets/styles/trynewevent.css">
     <link rel="stylesheet" href="./assets/styles/news.css">
+    <link rel="stylesheet" href="./assets/styles/scroll.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
@@ -22,15 +23,15 @@
 </head>
 
 <body class="preload">
-    <!-- <div class="preloader">
+    <div class="preloader">
         <div class="preloader__container">
             <h1 class="preloader__container__percent"></h1>
             <h5>percent</h5>
         </div>
-    </div> -->
-    <div class="videoCursour"></div>
+    </div>
+    <!-- <div class="videoCursour"></div> -->
 
-    <div class="cursor"> <img src="./assets/images/filmreel.png"></div>
+    <div class="cursor2"> <img src="./assets/images/filmreel.png"></div>
     <!-- <div class="shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
@@ -44,458 +45,587 @@
     <div class="nav-container">
         <!-- <div class="works"><img src="./assets/images/logofinal.png"></div> -->
         <div class="works magnet">works</div>
-        <div class="bars magnet">show</div>
+        <div class="bars ">show</div>
         <div class="bio magnet">bio</div>
     </div>
     <div class="background"></div>
     <div class="navbar">
 
         <nav>
-            <div class="close ">
-                <div></div>
-            </div>
-            <!-- <div class="galery">
-               
-            </div> -->
-
-            </section>
             <div class="card-list">
-                <div class="backword">
+                <div class="close ">
+                    <div></div>
                 </div>
-                <!-- <div class="backwordVideo">
-                    <video autoplay muted id="my-video" class="video-js vjs-fill vjs-theme-city" preload="auto" poster="./assets/images/mn 30 years.jpg">
-                        <source src="./sample_1280x720_surfing_with_audio.mp4" type="video/mp4" />
-                      </video>
-                </div> -->
 
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2003</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
 
-                <article class="card2">
-                    <header class="card-header">
-                        <p>2004</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2005</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 fourth">
-                    <header class="card-header">
-                        <p>2006</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2006</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2006</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2006</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2007</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2008</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
-                <article class="card2 ">
-                    <header class="card-header">
-                        <p>2019</p>
-                    </header>
-                    <div class="card-author">
-                        <div class="author-name">
-                            <div class="author-name-prefix"> AKHER DEK FE MARS</div>
-                            film</div>
-                    </div>
-                </article>
 
-            </div>
-            <!-- dots circle -->
-            <div class="mouseCors">
-                <div class="circle">
 
+                <div class="strip-outer">
+                    <div class="nav-drag-word">swipe right and left</div>
+                    <!-- <div class="close-inner">close</div> -->
+                    <div class="strip-inner">
+                        <div class="draggable"></div>
+                        <div class="strip">
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/1.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+
+                                <p> moamed ramdan<span>2020</span> </p>
+
+                                <div class="img-outer img-outer--size-m">
+                                    <div class="img-inner" style="background-image:url('img/2.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-xl">
+                                    <div class="img-inner" style="background-image:url('img/3.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-l">
+                                    <div class="img-inner" style="background-image:url('img/4.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/5.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-m">
+                                    <div class="img-inner" style="background-image:url('img/6.png');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<br> <span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/7.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-l">
+                                    <div class="img-inner" style="background-image:url('img/8.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/1.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-l">
+                                    <div class="img-inner" style="background-image:url('img/1.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/2.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-xl">
+                                    <div class="img-inner" style="background-image:url('img/2.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/3.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-l">
+                                    <div class="img-inner" style="background-image:url('img/4.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s">
+                                    <div class="img-inner" style="background-image:url('img/1.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-l">
+                                    <div class="img-inner" style="background-image:url('img/6.png');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-m">
+                                    <div class="img-inner" style="background-image:url('img/7.jpg');"></div>
+                                </div>
+                                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+
+                            </div>
+                            <div class="strip__item">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-l ">
+                                    <div class="img-inner " style="background-image:url( 'img/8.jpg'); "></div>
+                                </div>
+                                <span class="strip__item-number "><a class="strip__item-link "><span></span></a><span class="strip__item-plus "></span></span>
+
+                            </div>
+                            <div class="strip__item ">
+                                <p> moamed ramdan<span>2020</span> </p>
+                                <div class="img-outer img-outer--size-s ">
+                                    <div class="img-inner " style="background-image:url( 'img/1.jpg'); "></div>
+                                </div>
+                                <span class="strip__item-number "><a class="strip__item-link "><span></span></a><span class="strip__item-plus "></span></span>
+
+                            </div>
+                        </div>
+                        <!--/strip-->
+                    </div>
+                    <!--/strip-inner-->
+                    <div class="strip-cover ">
+                        <h2 class="strip-cover__title ">show media production</h2>
+
+                    </div>
                 </div>
-                <div class="dragword ">drag</div>
-
+                <!--/strip-outer-->
+                <!-- <div class="content ">
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/1.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Assemblage</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/2.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Wherewithal</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/3.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Surreptitious</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/4.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Onomatopoeia</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/5.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Nemesis</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/6.png); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Penumbra</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/7.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Cathedral</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/8.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Propinquity</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/6.png); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Lissome</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/1.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Moiety</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/1.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Mondegreen</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/2.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Cathedral</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/3.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Gambol</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/4.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Forbearance</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/5.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Evanescent</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/6.png); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Embrocation</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/7.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Bucolic</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/8.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Eloquence</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <article class="content__item ">
+                        <div class="img-outer img-outer--content ">
+                            <div class="img-inner img-inner--content " style="background-image: url(img/1.jpg); "></div>
+                        </div>
+                        <div class="content__item-copy ">
+                            <h2 class="content__item-title ">Cathedral</h2>
+                            <p class="content__item-text ">Virtually no important undertaking is now carried on without it, whether that enterprise be building a cathedral, endowing a university, marketing a moving picture, floating a large bond issue, or electing a president.</p>
+                        </div>
+                    </article>
+                    <button class="content__close " aria-label="Close content "><svg width="12 " height="26 " viewBox="0 0 12 26 "><path d="M5.293 25H5v-.293l-5-5L.707 19 5 23.293V0h1v23.657L10.657 19l.707.707-5.657 5.657-.025-.025-.025.025L5.293 25z "/></svg></svg></button>
+                </div>
+-->
+                <div class="cursor ">
+                    <div class="cursor__inner cursor__inner--circle ">
+                        <div class="cursor__side cursor__side--left "></div>
+                        <div class="cursor__side cursor__side--right "></div>
+                    </div>
+                </div>
             </div>
-
         </nav>
+
+
     </div>
+    <!-- dots circle -->
+    <div class="mouseCors ">
+        <div class="circle "></div>
+        <!-- <div class="dragword ">drag</div> -->
+    </div>
+
     <!-- content of body section   -->
 
-    <section class="container">
+    <section class="container ">
         <!-- home header section -->
         <div class="homeHeader ">
             <p class="headertextbold ">FANS MAKE IT POSSIBLE , AND WE HAVE THE DATA TO PROVE IT.</p>
-            <p class="headertextlight">FANS MAKE IT POSSIBLE, AND WE HAVE THE DATA TO PROVE IT.FANS MAKE IT POSSIBLE, AND WE HAVE THE DATA TO PROVE IT.</p>
+            <p class="headertextlight ">FANS MAKE IT POSSIBLE, AND WE HAVE THE DATA TO PROVE IT.FANS MAKE IT POSSIBLE, AND WE HAVE THE DATA TO PROVE IT.</p>
         </div>
         <!-- about section  -->
-        <div class="about">
-            <p data-aos="fade-in"  class="abouttextbold content__title">about</p>
-            <p data-aos="fade-in"  class="abouttextlight">Show Media Production, founded in 2020 and based in Egypt is an artistic and media production implementation company, and participated in the implementation of more than 100 projects, from films, series, theater, advertising and awareness
-                campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media
+        <div class="about ">
+            <p data-aos="fade-in " class="abouttextbold content__title ">about</p>
+            <p data-aos="fade-in " class="abouttextlight ">Show Media Production, founded in 2020 and based in Egypt is an artistic and media production implementation company, and participated in the implementation of more than 100 projects, from films, series, theater, advertising and awareness
+                campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media
                 production, The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to
                 facilitate the production process, whatever the volume of the production.</p>
         </div>
-        <div class="about-video glitch">
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            
-           
-            <video data-aos="fade-in"  id="my-video" class="video-js vjs-fill vjs-theme-city" controls preload="auto" poster="./assets/images/mn30years.jpg">
-                <source src="./sample_1280x720_surfing_with_audio.mp4" type="video/mp4" />
+        <div class="about-video glitch ">
+            <div class="img "></div>
+            <div class="img "></div>
+            <div class="img "></div>
+            <div class="img "></div>
+
+
+            <video data-aos="fade-in " id="my-video " class="video-js vjs-fill vjs-theme-city " controls preload="auto " poster="./assets/images/logo3.png">
+                <source src="./sample_1280x720_surfing_with_audio.mp4 " type="video/mp4 " />
               </video>
         </div>
 
 
         <!-- news accordion section -->
-        <h3 data-aos="fade-in"  class="news-section-title content__title">
+        <h3 data-aos="fade-in " class="news-section-title content__title ">
             news & events
         </h3>
 
-        <div data-aos="fade-in"  class="accordion-news">
-            <div class="  accordion-overlayer"></div>
+        <div data-aos="fade-in " class="accordion-news ">
+            <div class=" accordion-overlayer "></div>
             <div class="link-new link--metis--new one-new ">
                 <div class="new-header ">
                     <h3>
                         show media production
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <!-- <img class="menu__item-img" src="./assets/images/kaza.jpg" /> -->
+                    <i class="fas fa-sort-down "></i>
+                    <!-- <img class="menu__item-img " src="./assets/images/kaza.jpg " /> -->
 
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
 
-            <div class="link-new link--metis--new one-new">
-                <div class="new-header">
+            <div class="link-new link--metis--new one-new ">
+                <div class="new-header ">
                     <h3>
                         mohamed ramdan
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class="link-new link--metis--new one-new">
-                <div class="new-header">
+            <div class="link-new link--metis--new one-new ">
+                <div class="new-header ">
                     <h3>
                         akla2na show
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class="link-new link--metis--new one-new">
-                <div class="new-header">
+            <div class="link-new link--metis--new one-new ">
+                <div class="new-header ">
                     <h3>
                         m eight vs mahmoud el shiekh
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class=" link-new link--metis--new one-new">
+            <div class=" link-new link--metis--new one-new ">
 
-                <div class="new-header">
+                <div class="new-header ">
                     <h3>
                         sho media
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class=" link-new link--metis--new one-new">
-                <div class="new-header">
+            <div class=" link-new link--metis--new one-new ">
+                <div class="new-header ">
                     <h3>
                         sho media
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class="link-new link--metis--new one-new">
+            <div class="link-new link--metis--new one-new ">
 
-                <div class="new-header">
+                <div class="new-header ">
                     <h3>
                         sho media
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class="link-new link--metis--new one-new">
+            <div class="link-new link--metis--new one-new ">
 
-                <div class="new-header">
+                <div class="new-header ">
                     <h3>
                         sho media
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/kaza.jpg" />
+                    <i class="fas fa-sort-down "></i>
+                    <img class="menu__item-img " src="./assets/images/kaza.jpg " />
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
-            <div class="link-new link--metis--new one-new">
+            <div class="link-new link--metis--new one-new ">
 
-                <div class="new-header">
+                <div class="new-header ">
                     <h3>
                         sho media
                     </h3>
-                    <i class="fas fa-sort-down"></i>
-                    <img class="menu__item-img" src="./assets/images/logofinal.png" />
+                    <i class="fas fa-sort-down "></i>
+
                 </div>
-                <div class="new-expanded">
+                <div class="new-expanded ">
                     <p>
-                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production" acts as a gateway to the implementation of film production, television and media production,
+                        campaigns, to organizing celebrations and events. The company's vision is to build a wide range of local and international customers. "Show Media Production " acts as a gateway to the implementation of film production, television and media production,
                         The company also aims to provide a high level quality to commensurate with our clients expectations and their budget, and gain clients satisfaction and trust, We have a professional academic team of integrated filmmakers to facilitate
                         the production process, whatever the volume of the pro
-                        <a href="./index.html">reed more</a>
+                        <a href="./index.html ">reed more</a>
                     </p>
                 </div>
             </div>
 
         </div>
         <!--         
-        <div class="menu">
-            <div class="menu__item">
-                <a class="menu__item-link">Showreel</a>
-                <img class="menu__item-img" src="./assets/images/mn 30 years.jpg" alt="Some image" />
-                <div class="marquee">
-                    <div class="marquee__inner" aria-hidden="true">
+        <div class="menu ">
+            <div class="menu__item ">
+                <a class="menu__item-link ">Showreel</a>
+                <img class="menu__item-img " src="./assets/images/mn 30 years.jpg " alt="Some image " />
+                <div class="marquee ">
+                    <div class="marquee__inner " aria-hidden="true ">
                         <span>Showreel</span>
                         <span>Showreel</span>
                         <span>Showreel</span>
@@ -503,11 +633,11 @@
                     </div>
                 </div>
             </div>
-            <div class="menu__item">
-                <a class="menu__item-link">Case Studies</a>
-                <img class="menu__item-img" src="./assets/images/king.jpg" alt="Some image" />
-                <div class="marquee">
-                    <div class="marquee__inner" aria-hidden="true">
+            <div class="menu__item ">
+                <a class="menu__item-link ">Case Studies</a>
+                <img class="menu__item-img " src="./assets/images/king.jpg " alt="Some image " />
+                <div class="marquee ">
+                    <div class="marquee__inner " aria-hidden="true ">
                         <span>Case Studies</span>
                         <span>Case Studies</span>
                         <span>Case Studies</span>
@@ -515,11 +645,11 @@
                     </div>
                 </div>
             </div>
-            <div class="menu__item">
-                <a class="menu__item-link">Experiments</a>
-                <img class="menu__item-img" src="./assets/images/as3d.jpg" alt="Some image" />
-                <div class="marquee">
-                    <div class="marquee__inner" aria-hidden="true">
+            <div class="menu__item ">
+                <a class="menu__item-link ">Experiments</a>
+                <img class="menu__item-img " src="./assets/images/as3d.jpg " alt="Some image " />
+                <div class="marquee ">
+                    <div class="marquee__inner " aria-hidden="true ">
                         <span>Experiments</span>
                         <span>Experiments</span>
                         <span>Experiments</span>
@@ -527,11 +657,11 @@
                     </div>
                 </div>
             </div>
-            <div class="menu__item">
-                <a class="menu__item-link">Our Crew</a>
-                <img class="menu__item-img" src="./assets/images/kaza.jpg" alt="Some image" />
-                <div class="marquee">
-                    <div class="marquee__inner" aria-hidden="true">
+            <div class="menu__item ">
+                <a class="menu__item-link ">Our Crew</a>
+                <img class="menu__item-img " src="./assets/images/kaza.jpg " alt="Some image " />
+                <div class="marquee ">
+                    <div class="marquee__inner " aria-hidden="true ">
                         <span>The Crew</span>
                         <span>The Crew</span>
                         <span>The Crew</span>
@@ -539,11 +669,11 @@
                     </div>
                 </div>
             </div>
-            <div class="menu__item">
-                <a class="menu__item-link">Contact</a>
-                <img class="menu__item-img" src="./assets/images/king.jpg" alt="Some image" />
-                <div class="marquee">
-                    <div class="marquee__inner" aria-hidden="true">
+            <div class="menu__item ">
+                <a class="menu__item-link ">Contact</a>
+                <img class="menu__item-img " src="./assets/images/king.jpg " alt="Some image " />
+                <div class="marquee ">
+                    <div class="marquee__inner " aria-hidden="true ">
                         <span>Contact</span>
                         <span>Contact</span>
                         <span>Contact</span>
@@ -552,18 +682,15 @@
                 </div>
             </div>
         </div>
-
-
-
  -->
 
 
-        <p data-aos="fade-in"  class="get-in-touch-section-header content__title">get in<br><span>touch</span> </p>
+        <p data-aos="fade-in " class="get-in-touch-section-header content__title ">get in<br><span>touch</span> </p>
         <!-- get-in-touch-section -->
-        <div data-aos="zoom-in-up" class="get-in-touch-section">
-            <div class="get-in-touch-section-social-media">
+        <div data-aos="zoom-in-up " class="get-in-touch-section ">
+            <div class="get-in-touch-section-social-media ">
                 <p>
-                    14 Al-Ahrar st. from Battal Ahmed AbdElaziz - 3rd floor - flat 3 - Dokki - Giza Government - Egypt<br><a href="./index.html" class=" link link--metis get-in-bold"> Get Directions</a>
+                    14 Al-Ahrar st. from Battal Ahmed AbdElaziz - 3rd floor - flat 3 - Dokki - Giza Government - Egypt<br><a href="./index.html " class=" link link--metis get-in-bold "> Get Directions</a>
                 </p>
                 <p>
                     +20233380907
@@ -576,49 +703,52 @@
 
 
             </div>
-            <div class="get-in-touch-section-email">
+            <div class="get-in-touch-section-email ">
                 <!-- Email -->
-                <input type="email" placeholder="EMAIL">
-                <a class="submit" href="./index.html"><i class="fas fa-arrow-right"></i></a>
+                <input type="email " placeholder="EMAIL ">
+                <a class="submit " href="./index.html "><i class="fas fa-arrow-right "></i></a>
             </div>
 
 
         </div>
 
-        <div class="get-in-touch-section-social-media">
-            <div class=" social" data-aos="zoom-in-up">
-                <i class="link link--metis">FACEBOOK</i>
-                <i class="">INSTAGRAM</i>
-                <i class="">YOUTUBE</i>
-                <i class="">VIMEO</i>
-                <i class="">LINKEDIN</i>
+        <div class="get-in-touch-section-social-media ">
+            <div class=" social " data-aos="zoom-in-up ">
+                <i class="link link--metis ">FACEBOOK</i>
+                <i class="link link--metis ">INSTAGRAM</i>
+                <i class="link link--metis ">YOUTUBE</i>
+                <i class="link link--metis ">VIMEO</i>
+                <i class="link link--metis ">LINKEDIN</i>
             </div>
         </div>
-        <div data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"   class="footer-section">
-            <p class="privacypolicypart">
+        <div data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="footer-section ">
+            <p class="privacypolicypart ">
                 privacy and policy
             </p>
-            <p class="meightpart">
-                designed by <span>M-EIGHT</span>
+            <p class="meightpart ">
+                designed by <span> <a href="https://m-eight.net/s">m-eight</a></span>
             </p>
 
         </div>
 
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script>
-    <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/cardsthree.js"></script>
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.3.0/draggabilly.pkgd.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/scripts/script.js "></script>
+    <script src="assets/scripts/smoothscroll.js "></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js "></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
+
+
+
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
 </body>

@@ -1,9 +1,8 @@
-
 const open = document.querySelector('.bars');
 const close = document.querySelector('.close');
 var tl = gsap.timeline({ defaults: { duration: 0.4, ease: 'easeIn' } });
 open.addEventListener('click', () => {
-    curs.classList.add('showin');
+
     disableScroll();
     if (tl.reversed()) {
         tl.play();
@@ -24,29 +23,29 @@ open.addEventListener('click', () => {
 
 
 // TEXT
-TweenMax.from(".text h1 .hidetext", 1.5, {
-    delay: 1,
-    y: "100%",
-    ease: Expo.easeInOut
-});
+// TweenMax.from(".text h1 .hidetext", 1.5, {
+//     delay: 1,
+//     y: "100%",
+//     ease: Expo.easeInOut
+// });
 
 
-TweenMax.from(".text h3 .hidetext", 1.5, {
-    delay: 1.2,
-    y: "100%",
-    ease: Expo.easeInOut
-});
+// TweenMax.from(".text h3 .hidetext", 1.5, {
+//     delay: 1.2,
+//     y: "100%",
+//     ease: Expo.easeInOut
+// });
 
 
 
 
-let m = new MagnetMouse({
-    magnet: {
-        element: '.magnet'
-    }
-});
+// let m = new MagnetMouse({
+//     magnet: {
+//         element: '.magnet'
+//     }
+// });
 
-m.init();
+// m.init();
 
 
 // anime({
@@ -56,15 +55,6 @@ m.init();
 //     direction: 'alternate',
 //     loop: true
 // });
-
-const curs = document.querySelector('.cursor img')
- 
-close.addEventListener('click', () => {
-    tl.reverse();
-    enableScroll()
-    curs.classList.remove('showin');
-
-});
 
 
 // left: 37, up: 38, right: 39, down: 40,
@@ -110,10 +100,10 @@ function enableScroll() {
 
 
 // mouse scrolling 
-const slider = document.querySelector('.card-list');
-let isDown = false;
-let startX;
-let scrollLeft;
+// const slider = document.querySelector('.card-list');
+// let isDown = false;
+// let startX;
+// let scrollLeft;
 
 
 
@@ -131,67 +121,70 @@ $(function() {
 
 });
 
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
+// slider.addEventListener('mousedown', (e) => {
+//     isDown = true;
+//     slider.classList.add('active');
+//     startX = e.pageX - slider.offsetLeft;
+//     scrollLeft = slider.scrollLeft;
+// });
 
 
 
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
+// slider.addEventListener('mouseleave', () => {
+//     isDown = false;
+//     slider.classList.remove('active');
+// });
+// slider.addEventListener('mouseup', () => {
+//     isDown = false;
+//     slider.classList.remove('active');
+// });
 
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk;
+// slider.addEventListener('mousemove', (e) => {
+//     if (!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - slider.offsetLeft;
+//     const walk = (x - startX) * 2; //scroll-fast
+//     slider.scrollLeft = scrollLeft - walk;
 
-});
+// });
 
 
-// mouseCusor shape
+// // mouseCusor shape
 
-var mouseCusor = document.querySelector('.mouseCors');
-var mouseCircle = document.querySelector('.circle');
+// var mouseCircle = document.querySelector('.circle');
 
-slider.addEventListener('mousemove', detectmousemove)
+const curs = document.querySelector('.cursor2 ')
+window.addEventListener('mousemove', detectmousemove)
 
 function detectmousemove(e) {
-    mouseCusor.style.opacity = "1"
-    mouseCusor.style.top = e.pageY + "px";
-    mouseCusor.style.left = e.pageX + "px";
-}
-
-slider.addEventListener('mouseleave', leavemousemove)
-
-function leavemousemove(e) {
-    mouseCusor.style.opacity = "0"
-    mouseCircle.style.transition = "all 0.4s ease";
-}
-
-slider.addEventListener('mousedown', solidchange)
-
-function solidchange(e) {
-    mouseCircle.style.border = "2px solid #fff";
-
+    curs.style.top = e.pageY + "px";
+    curs.style.left = e.pageX + "px";
 
 }
-slider.addEventListener('mouseup', dashedchange)
 
-function dashedchange(e) {
-    mouseCircle.style.border = "1.6px dashed #fff";
+close.addEventListener('click', () => {
+    tl.reverse();
+    enableScroll()
+    curs.classList.remove('showin');
 
-}
+});
+
+
+
+
+// slider.addEventListener('mousedown', solidchange)
+
+// function solidchange(e) {
+//     mouseCircle.style.border = "2px solid #fff";
+
+
+// }
+// slider.addEventListener('mouseup', dashedchange)
+
+// function dashedchange(e) {
+//     mouseCircle.style.border = "1.6px dashed #fff";
+
+// }
 
 
 const expanded = document.querySelectorAll('.one-new');
@@ -202,7 +195,7 @@ expanded.forEach(expand => {
 
     expand.addEventListener('click', () => {
         expand.classList.toggle('active');
-        console.log('hi')
+
     })
 
     const newsImage = document.querySelector(".menu__item-img");
@@ -276,39 +269,24 @@ const loaderTimer = setInterval(function() {
 
 // remove video glitsh on click
 
-const videoglitch= document.querySelector('.glitch');
-const imageglitch= document.querySelectorAll('.glitch .img');
+const videoglitch = document.querySelector('.glitch');
+const imageglitch = document.querySelectorAll('.glitch .img');
 
-imageglitch.forEach(image => { 
-    videoglitch.addEventListener('click' , () => {
+imageglitch.forEach(image => {
+    videoglitch.addEventListener('click', () => {
         image.style.display = "none"
-        
+
     })
-}) 
-imageglitch.forEach(image => { 
-    videoglitch.addEventListener('touchmove' , () => {
+})
+imageglitch.forEach(image => {
+    videoglitch.addEventListener('touchmove', () => {
         image.style.display = "none"
-        
-        
+
+
     })
-}) 
+})
 
 // cusror
 
 const vidcurs = document.querySelector('.videoCursour');
 const videoelement = document.querySelector('#my-video');
-const windowcurs = document.querySelector('.cursor');
-
-videoelement.addEventListener("mouseenter", evt => {
-    videoelement.addEventListener('mousmove' , e => {
-        const mouseX = evt.clientX;
-        const mouseY = evt.clientY;
-        vidcurs.style.top = mouseY + "px"
-        vidcurs.style.left = mouseX + "px"
-        console.log('hi')
-    })
-   
-    
-});
-
-

@@ -1,225 +1,225 @@
-import * as THREE from 'three';
-import images from './images';
-import vertex from './shaders/vertex.glsl';
-import fragment from './shaders/fragment.glsl';
+// import * as THREE from 'three';
+// import images from './images';
+// import vertex from './shaders/vertex.glsl';
+// import fragment from './shaders/fragment.glsl';
 
 
-let targetX = 0;
-let targetY = 0;
+// let targetX = 0;
+// let targetY = 0;
 
-function lerp(start, end, t) {
-    return start * (1 - t) + end * t;
-}
+// function lerp(start, end, t) {
+//     return start * (1 - t) + end * t;
+// }
 
-const textureOne = new THREE.TextureLoader().load(images.imageOne)
-const textureThree = new THREE.TextureLoader().load(images.imageThree)
-const textureTwo = new THREE.TextureLoader().load(images.imageTwo)
-const textureFour = new THREE.TextureLoader().load(images.imageFour)
+// const textureOne = new THREE.TextureLoader().load(images.imageOne)
+// const textureThree = new THREE.TextureLoader().load(images.imageThree)
+// const textureTwo = new THREE.TextureLoader().load(images.imageTwo)
+// const textureFour = new THREE.TextureLoader().load(images.imageFour)
 
-class Webgl {
-    constructor() {
-        this.container = document.querySelector('.card-list');
-        this.cards = [...document.querySelectorAll('.card2')];
-        this.scene = new THREE.Scene();
-        this.perspective = 25;
-        this.sizes = new THREE.Vector2(0, 0); //mesh size
-        this.offset = new THREE.Vector2(0, 0); //mesh position
-        this.uniforms = {
-            uTexture: { value: textureOne },
-            uAlpha: { value: 0.0 },
-            uOffset: { value: new THREE.Vector2(0.0, 0.0) }
-        }
-        this.cards.forEach((card, idx) => {
-            card.addEventListener('mouseenter', () => {
-                switch (idx) {
-                    case 0:
-                        this.uniforms.uTexture.value = textureOne;
+// class Webgl {
+//     constructor() {
+//         this.container = document.querySelector('.card-list');
+//         this.cards = [...document.querySelectorAll('.card2')];
+//         this.scene = new THREE.Scene();
+//         this.perspective = 25;
+//         this.sizes = new THREE.Vector2(0, 0); //mesh size
+//         this.offset = new THREE.Vector2(0, 0); //mesh position
+//         this.uniforms = {
+//             uTexture: { value: textureOne },
+//             uAlpha: { value: 0.0 },
+//             uOffset: { value: new THREE.Vector2(0.0, 0.0) }
+//         }
+//         this.cards.forEach((card, idx) => {
+//             card.addEventListener('mouseenter', () => {
+//                 switch (idx) {
+//                     case 0:
+//                         this.uniforms.uTexture.value = textureOne;
 
-                        break;
-                    case 1:
-                        this.uniforms.uTexture.value = textureFour;
+//                         break;
+//                     case 1:
+//                         this.uniforms.uTexture.value = textureFour;
 
-                        break;
-                    case 2:
-                        this.uniforms.uTexture.value = textureTwo;
-                        break;
-                    case 3:
-                        this.uniforms.uTexture.value = textureThree;
-                        break;
-                    case 4:
-                        this.uniforms.uTexture.value = textureFour;
-                        break;
-                    case 5:
-                        this.uniforms.uTexture.value = textureOne;
-                        break;
-                    case 6:
-                        this.uniforms.uTexture.value = textureTwo;
-                        break;
-                    case 7:
-                        this.uniforms.uTexture.value = textureThree;
-                        break;
-                    case 8:
-                        this.uniforms.uTexture.value = textureFour;
-                        break;
-                    case 9:
-                        this.uniforms.uTexture.value = textureOne;
-                        break;
-                    case 10:
-                        this.uniforms.uTexture.value = textureTwo;
-                        break;
-                    case 11:
-                        this.uniforms.uTexture.value = textureThree;
-                        break;
-                    case 12:
-                        this.uniforms.uTexture.value = textureFour;
-                        break;
-                    case 13:
-                        this.uniforms.uTexture.value = textureOne;
-                        break;
-                    case 14:
-                        this.uniforms.uTexture.value = textureTwo;
-                        break;
-                    case 15:
-                        this.uniforms.uTexture.value = textureThree;
-                        break;
-                    case 16:
-                        this.uniforms.uTexture.value = textureFour;
-                        break;
-                }
-            })
-        })
-        let cardss = document.querySelectorAll('.card-list .card2');
-        this.addEventListeners(cardss);
-        this.setupCamera();
-        this.onMouseMove();
-        this.createMesh();
-        this.render()
+//                         break;
+//                     case 2:
+//                         this.uniforms.uTexture.value = textureTwo;
+//                         break;
+//                     case 3:
+//                         this.uniforms.uTexture.value = textureThree;
+//                         break;
+//                     case 4:
+//                         this.uniforms.uTexture.value = textureFour;
+//                         break;
+//                     case 5:
+//                         this.uniforms.uTexture.value = textureOne;
+//                         break;
+//                     case 6:
+//                         this.uniforms.uTexture.value = textureTwo;
+//                         break;
+//                     case 7:
+//                         this.uniforms.uTexture.value = textureThree;
+//                         break;
+//                     case 8:
+//                         this.uniforms.uTexture.value = textureFour;
+//                         break;
+//                     case 9:
+//                         this.uniforms.uTexture.value = textureOne;
+//                         break;
+//                     case 10:
+//                         this.uniforms.uTexture.value = textureTwo;
+//                         break;
+//                     case 11:
+//                         this.uniforms.uTexture.value = textureThree;
+//                         break;
+//                     case 12:
+//                         this.uniforms.uTexture.value = textureFour;
+//                         break;
+//                     case 13:
+//                         this.uniforms.uTexture.value = textureOne;
+//                         break;
+//                     case 14:
+//                         this.uniforms.uTexture.value = textureTwo;
+//                         break;
+//                     case 15:
+//                         this.uniforms.uTexture.value = textureThree;
+//                         break;
+//                     case 16:
+//                         this.uniforms.uTexture.value = textureFour;
+//                         break;
+//                 }
+//             })
+//         })
+//         let cardss = document.querySelectorAll('.card-list .card2');
+//         this.addEventListeners(cardss);
+//         this.setupCamera();
+//         this.onMouseMove();
+//         this.createMesh();
+//         this.render()
 
-    }
+//     }
 
-    get viewport() {
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-        let aspectRatio = width / height;
+//     get viewport() {
+//         let width = window.innerWidth;
+//         let height = window.innerHeight;
+//         let aspectRatio = width / height;
 
-        return {
-            width,
-            height,
-            aspectRatio
-        }
-    };
+//         return {
+//             width,
+//             height,
+//             aspectRatio
+//         }
+//     };
 
-    // addEventListeners(element) {
-    //     element.addEventListener('mouseenter', () => {
-    //         this.cardsHover = true;
-    //     })
-    //     element.addEventListener('mouseleave', () => {
-    //         this.cardsHover = false;
-    //     })
-    // }
-
-
-    addEventListeners(e) {
-        let cardss = document.querySelectorAll('.card-list .card2');
-        cardss.forEach(card => {
-
-            card.addEventListener("mouseenter", (ele) => {
-                this.cardsHover = true
-
-            })
-            card.addEventListener("mouseleave", () => {
-                this.cardsHover = false
-            })
-        })
-    }
+//     // addEventListeners(element) {
+//     //     element.addEventListener('mouseenter', () => {
+//     //         this.cardsHover = true;
+//     //     })
+//     //     element.addEventListener('mouseleave', () => {
+//     //         this.cardsHover = false;
+//     //     })
+//     // }
 
 
+//     addEventListeners(e) {
+//         let cardss = document.querySelectorAll('.card-list .card2');
+//         cardss.forEach(card => {
 
+//             card.addEventListener("mouseenter", (ele) => {
+//                 this.cardsHover = true
+
+//             })
+//             card.addEventListener("mouseleave", () => {
+//                 this.cardsHover = false
+//             })
+//         })
+//     }
 
 
 
 
 
 
-    setupCamera() {
-
-        window.addEventListener('resize', this.onWindowResize.bind(this))
 
 
-        let foc = (180 * (2 * Math.atan(this.viewport.height / 2 / this.perspective))) / Math.PI;
-        this.camera = new THREE.PerspectiveCamera(foc, this.viewport.aspectRatio, 0.1, 100);
-        this.camera.position.set(0, 0, this.perspective);
 
-        this.renderer = new THREE.WebGL1Renderer({ antialias: true, alpha: true });
-        this.renderer.setSize(this.viewport.width, this.viewport.height);
-        this.renderer.setPixelRatio(window.devicePixelRatio);
-        this.container.appendChild(this.renderer.domElement)
-    }
-    createMesh() {
-        this.geometry = new THREE.PlaneGeometry(1, 1, 20, 20);
-        this.material = new THREE.ShaderMaterial({
-            uniforms: this.uniforms,
-            vertexShader: vertex,
-            fragmentShader: fragment,
-            transparent: true,
-            // wireframe: true,
-            // side: THREE.DoubleSide
-        })
-        this.mesh = new THREE.Mesh(this.geometry, this.material);
-        this.sizes.set(270, 390, 1);
-        this.mesh.scale.set(this.sizes.x, this.sizes.y, 1);
+//     setupCamera() {
 
-        // this.mesh.position.set(this.offset.x, this.offset.y, 0);
-
-        this.scene.add(this.mesh);
-    }
-    onWindowResize() {
-
-        this.camera.aspect = this.viewport.aspectRatio;
-        this.camera.foc = (180 * (2 * Math.atan(this.viewport.height / 2 / this.perspective))) / Math.PI;
-        this.renderer.setSize(this.viewport.width, this.viewport.height);
-        this.camera.updateProjectionMatrix();
-    }
+//         window.addEventListener('resize', this.onWindowResize.bind(this))
 
 
-    onMouseMove() {
-        window.addEventListener('mousemove', (e) => {
-            targetX = e.clientX;
-            targetY = e.clientY;
-        })
-    }
+//         let foc = (180 * (2 * Math.atan(this.viewport.height / 2 / this.perspective))) / Math.PI;
+//         this.camera = new THREE.PerspectiveCamera(foc, this.viewport.aspectRatio, 0.1, 100);
+//         this.camera.position.set(0, 0, this.perspective);
 
-    render() {
-        this.offset.x = lerp(this.offset.x, targetX, 0.1);
-        this.offset.y = lerp(this.offset.y, targetY, 0.1);
-        this.uniforms.uOffset.value.set((targetX - this.offset.x) * 0.0005, -(targetY - this.offset.y) * 0.0005)
-            // this.mesh.scale.set(this.sizes.x, this.sizes.y)
-        this.mesh.position.set(this.offset.x - (window.innerWidth / 2), -this.offset.y + (window.innerHeight / 2), 0);
+//         this.renderer = new THREE.WebGL1Renderer({ antialias: true, alpha: true });
+//         this.renderer.setSize(this.viewport.width, this.viewport.height);
+//         this.renderer.setPixelRatio(window.devicePixelRatio);
+//         this.container.appendChild(this.renderer.domElement)
+//     }
+//     createMesh() {
+//         this.geometry = new THREE.PlaneGeometry(1, 1, 20, 20);
+//         this.material = new THREE.ShaderMaterial({
+//             uniforms: this.uniforms,
+//             vertexShader: vertex,
+//             fragmentShader: fragment,
+//             transparent: true,
+//             // wireframe: true,
+//             // side: THREE.DoubleSide
+//         })
+//         this.mesh = new THREE.Mesh(this.geometry, this.material);
+//         this.sizes.set(270, 390, 1);
+//         this.mesh.scale.set(this.sizes.x, this.sizes.y, 1);
 
-        // set uAlpha when list is hovered / unhovered
-        this.cardsHover ?
-            this.uniforms.uAlpha.value = lerp(this.uniforms.uAlpha.value, 1.0, 0.1) :
-            this.uniforms.uAlpha.value = lerp(this.uniforms.uAlpha.value, 0.0, 0.1);
+//         // this.mesh.position.set(this.offset.x, this.offset.y, 0);
 
+//         this.scene.add(this.mesh);
+//     }
+//     onWindowResize() {
 
-        for (let i = 0; i < this.cards.length; i++) {
-            if (this.cardsHover) {
-                this.cards[i].style.opacity = 0.1
-
-
-            } else {
-                this.cards[i].style.opacity = 1
-            }
-
-
-        }
-        this.renderer.domElement.id = 'canvasid';
-        this.renderer.render(this.scene, this.camera);
-        window.requestAnimationFrame(this.render.bind(this));
-
-    }
-
-}
+//         this.camera.aspect = this.viewport.aspectRatio;
+//         this.camera.foc = (180 * (2 * Math.atan(this.viewport.height / 2 / this.perspective))) / Math.PI;
+//         this.renderer.setSize(this.viewport.width, this.viewport.height);
+//         this.camera.updateProjectionMatrix();
+//     }
 
 
-new Webgl()
+//     onMouseMove() {
+//         window.addEventListener('mousemove', (e) => {
+//             targetX = e.clientX;
+//             targetY = e.clientY;
+//         })
+//     }
+
+//     render() {
+//         this.offset.x = lerp(this.offset.x, targetX, 0.1);
+//         this.offset.y = lerp(this.offset.y, targetY, 0.1);
+//         this.uniforms.uOffset.value.set((targetX - this.offset.x) * 0.0005, -(targetY - this.offset.y) * 0.0005)
+//             // this.mesh.scale.set(this.sizes.x, this.sizes.y)
+//         this.mesh.position.set(this.offset.x - (window.innerWidth / 2), -this.offset.y + (window.innerHeight / 2), 0);
+
+//         // set uAlpha when list is hovered / unhovered
+//         this.cardsHover ?
+//             this.uniforms.uAlpha.value = lerp(this.uniforms.uAlpha.value, 1.0, 0.1) :
+//             this.uniforms.uAlpha.value = lerp(this.uniforms.uAlpha.value, 0.0, 0.1);
+
+
+//         for (let i = 0; i < this.cards.length; i++) {
+//             if (this.cardsHover) {
+//                 this.cards[i].style.opacity = 0.1
+
+
+//             } else {
+//                 this.cards[i].style.opacity = 1
+//             }
+
+
+//         }
+//         this.renderer.domElement.id = 'canvasid';
+//         this.renderer.render(this.scene, this.camera);
+//         window.requestAnimationFrame(this.render.bind(this));
+
+//     }
+
+// }
+
+
+// new Webgl()

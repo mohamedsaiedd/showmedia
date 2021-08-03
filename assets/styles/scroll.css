@@ -68,12 +68,7 @@ a:focus {
     outline: none;
 }
 
-main {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
 
 .message {
     color: var(--color-bg);
@@ -593,5 +588,6 @@ main {
         position: relative;
         bottom: -85%;
         width: 100%;
+       
     }
 }

@@ -104,8 +104,10 @@ section {
     top: 100px;
     /* height: 400vh !important; */
     width: 100vw;
-    z-index: -1;
+    
 }
+
+
 
 .nav-container {
     cursor: pointer;
@@ -117,6 +119,7 @@ section {
     -webkit-tap-highlight-color: transparent;
     display: flex;
     font-size: 1em;
+    z-index: 999;
     padding: 0px 12%;
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0));
     mix-blend-mode: difference !important;
@@ -137,9 +140,13 @@ section {
     color: rgb(210, 210, 255);
     font-size: 0.7rem;
 }
+.bio-img img {
+    width: 100px;
+    
+}
 
 .works img {
-    width: 100px;
+    
 }
 
 h3 {
@@ -197,7 +204,7 @@ nav {
     height: 100vh;
     overflow: hidden;
     background: #9e7f54;
-    z-index: 1
+    z-index: 1111
 }
 
 nav::after {
@@ -354,7 +361,7 @@ nav .close:hover div::after {
     }
 }
 
-.container {
+.container2 {
     padding: 0px 12%;
     height: 100%;
 }
@@ -375,7 +382,7 @@ nav .close:hover div::after {
     .headertextbold {
         font-size: 4.4em;
     }
-    .container {
+    .container2 {
         padding: 10% 10%;
     }
     .headertextlight {
@@ -396,7 +403,7 @@ nav .close:hover div::after {
 /* mobile */
 
 @media (max-width:900px) {
-    .container {
+    .container2 {
         padding: 0% 7%;
     }
     .headertextlight {

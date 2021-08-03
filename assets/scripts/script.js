@@ -290,3 +290,66 @@ imageglitch.forEach(image => {
 
 const vidcurs = document.querySelector('.videoCursour');
 const videoelement = document.querySelector('#my-video');
+
+
+// page trasnstion 
+
+
+function delay(n) {
+    n = n || 2000;
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+}
+
+function pageTransition() {
+    var t2 = gsap.timeline();
+    t2.to(".loading-screen", {
+        duration: 1.2,
+        width: "100%",
+        left: "0%",
+        ease: "Expo.easeInOut",
+    });
+
+    t2.to(".loading-screen", {
+        duration: 1,
+        width: "100%",
+        left: "100%",
+        ease: "Expo.easeInOut",
+        delay: 0.3,
+    });
+    t2.set(".loading-screen", { left: "-100%" });
+}
+
+function contentAnimation() {
+    var t2 = gsap.timeline();
+    t2.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2 });
+}
+
+$(function () {
+    barba.init({
+        sync: true,
+
+        transitions: [
+            {
+                 leave(data) {
+                    const done = this.async();
+
+                    pageTransition();
+                     delay(1000);
+                    done();
+                },
+
+                 enter(data) {
+                    contentAnimation();
+                },
+
+                 once(data) {
+                    contentAnimation();
+                },
+            },
+        ],
+    });
+});

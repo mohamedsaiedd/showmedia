@@ -5,11 +5,12 @@ a {
 
 .card-list {
     display: flex;
-    padding: 3rem;
     overflow-x: scroll;
     opacity: 0;
     padding-left: 10 !important;
     cursor: pointer;
+    background-color: transparent;
+    z-index: -2;
 }
 
 .card-list>article {
@@ -198,7 +199,7 @@ nav::-webkit-scrollbar-thumb {
     display: none;
 }
 
-.cursor img {
+.cursor2 img {
     transition: all 0.4s ease !important;
 }
 
@@ -545,9 +546,6 @@ canvas {
 .card2:hover {
     background-color: blanchedalmond;
 }
-
-
-/* } */
 
 @media (hover: none) and (pointer: coarse) {
     .card-list>article {

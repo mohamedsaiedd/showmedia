@@ -275,6 +275,7 @@ const imageglitch = document.querySelectorAll('.glitch .img');
 imageglitch.forEach(image => {
     videoglitch.addEventListener('click', () => {
         image.style.display = "none"
+       
 
     })
 })
@@ -289,7 +290,7 @@ imageglitch.forEach(image => {
 // cusror
 
 const vidcurs = document.querySelector('.videoCursour');
-const videoelement = document.querySelector('#my-video');
+const videoelement = document.querySelector('video');
 
 
 // page trasnstion 
@@ -353,3 +354,136 @@ $(function () {
         ],
     });
 });
+
+
+const videoSvg = document.querySelector('.svg-video')
+
+videoSvg.addEventListener('click' , () => {
+    const tl3 = gsap.timeline();
+    const tl4 = gsap.timeline();
+    const tl5 = gsap.timeline();
+
+    disableScroll();
+    
+        tl3.to('.button', {
+            scale : 30,
+            zIndex : 10000 ,
+            backgroundColor : '#000'
+        })
+        tl4.to('.svg-video', {
+            opacity : '0'
+        })
+    
+    .to('.nav-container' , {
+        opacity : '0'
+ 
+     } )
+     tl5.to('.textcircle' , {
+        
+        zIndex : 10000 ,
+        opacity: 0
+    })
+    .to('.close-button-video' , {
+        display : 'block',
+        delay : 0.5 ,
+
+    })
+    .to('.video-js' , {
+        position : 'sticky' ,
+        zIndex : 10000,
+        left: '0',
+        width : '100% !important',
+        height: '50% !important',
+       
+                
+    })
+  
+    videoelement.play() 
+})
+
+const videoClose = document.querySelector('.close-button-video')
+
+videoClose.addEventListener('click' , () => {
+    const tl13 = gsap.timeline();
+    const tl14 = gsap.timeline();
+    const tl15 = gsap.timeline();
+
+    enableScroll();
+    videoelement.pause() 
+
+    tl15.to('.video-js' , {
+        position : 'relative' ,
+        zIndex : -22222,
+        width : '100% !important',
+        height: '90vh !important', 
+
+    })
+    .to('.close-button-video' , {
+        display : 'none',
+        
+    })
+        tl13.to('.button', {
+            scale : 2,
+            zIndex : -222222 ,
+            backgroundColor : '#1f1f69',
+            
+        })
+        .to('.textcircle' , {
+            opacity: 1  
+        })
+        tl14.to('.svg-video', {
+            opacity : '1'
+        })
+      
+    .to('.nav-container' , {
+        opacity : '1'
+ 
+     })
+    
+     
+})
+
+const mqs = window.matchMedia('screen and (max-width: 592px)');
+videoClose.addEventListener('click' , () => {
+    const tl13 = gsap.timeline();
+    const tl14 = gsap.timeline();
+    const tl15 = gsap.timeline();
+
+if(mqs.matches) {
+
+
+    enableScroll();
+    videoelement.pause() 
+
+    tl15.to('.video-js' , {
+        position : 'relative' ,
+        zIndex : -22222,
+        width : '100% !important',
+        height: '90vh !important', 
+
+    })
+    .to('.close-button-video' , {
+        display : 'none',
+        
+    })
+        tl13.to('.button', {
+            scale : 1,
+            zIndex : -222222 ,
+            backgroundColor : '#1f1f69',
+            
+        })
+        .to('.textcircle' , {
+            opacity: 1  
+        })
+        tl14.to('.svg-video', {
+            opacity : '1'
+        })
+      
+    .to('.nav-container' , {
+        opacity : '1'
+ 
+     })
+    
+
+
+}})

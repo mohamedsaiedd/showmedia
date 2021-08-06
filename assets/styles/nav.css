@@ -554,7 +554,7 @@ canvas {
     z-index: 2 !important;
 }
 
-.backwordVideo #my-video {
+/* .backwordVideo #my-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -563,7 +563,7 @@ canvas {
     mix-blend-mode: screen;
     object-fit: cover;
     filter: grayscale(1);
-}
+} */
 
 
 /* 

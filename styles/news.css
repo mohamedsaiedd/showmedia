@@ -1,0 +1,516 @@
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import url(https://db.onlinewebfonts.com/c/ab83b275830b2d585ea027c47e3b237a?family=GraphiqueW09-bold);
+@font-face {
+    font-family: cocbold;
+    src: url(../fonts/Coconat-BoldExt.otf);
+}
+
+@font-face {
+    font-family: cocreg;
+    src: url(../fonts/Coconat-Regular.otf);
+}
+
+body {
+    font-family: cocbold;
+}
+
+:root {
+    --main-text-color: rgb(13, 9, 49);
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+}
+
+.accordion-news {
+    display: flex;
+    margin-top: 50px !important;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 320px;
+    width: 100%;
+    overflow-x: hidden;
+    transition: all 0.4s ease-in;
+    scrollbar-width: none;
+}
+
+.backword {
+    color: #ffffff;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-size: 4rem;
+}
+
+
+/* 
+.accordion-overlayer {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 320px;
+    opacity: 1;
+    background-image: linear-gradient(180deg, rgb(255, 255, 255), #ffffff);
+    pointer-events: none;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+    left: 0;
+    
+} */
+
+
+/* 
+.accordion-overlayer::after
+{
+    content: "";
+    position: absolute;
+    width: 200vw;
+    left: -50%;
+    top: -50%;
+    padding-top: 100%;
+    opacity: 0.2;
+    background-image: url(../images/noise.png);
+
+    animation: grain 0.2s steps(2) infinite;
+} */
+
+@keyframes grain {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-5%, -10%);
+    }
+    30% {
+        transform: translate(3%, -15%);
+    }
+    50% {
+        transform: translate(12%, 9%);
+    }
+    70% {
+        transform: translate(9%, 4%);
+    }
+    90% {
+        transform: translate(-1%, 7%);
+    }
+}
+
+.accordion-news:hover::-webkit-scrollbar {
+    background-color: #00000000;
+    max-width: 4px;
+    scroll-behavior: smooth;
+}
+
+.accordion-news::-webkit-scrollbar-thumb {
+    background: #00000000;
+}
+
+.one-new {
+    margin-top: 1rem;
+    cursor: pointer;
+    color: var(--main-text-color);
+    border-bottom: 0.4px solid rgba(0, 0, 0, 0.048);
+    margin: 0;
+}
+
+.one-new::after {
+    content: "";
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    height: 1px;
+    width: 0%;
+    display: block;
+    opacity: 0;
+}
+
+.new-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    font-family: cocbold;
+}
+
+.new-expanded {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.new-expanded p {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    font-family: cocreg;
+}
+
+.one-new.active .new-expanded {
+    max-height: 300px;
+    overflow: visible;
+    opacity: 1;
+}
+
+.one-new.active {
+    z-index: 9;
+}
+
+.new-header i {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(20deg);
+}
+
+.one-new.active .new-header i {
+    transform: rotate(-160deg);
+}
+
+.link-new {
+    cursor: pointer;
+    font-family: Bely;
+}
+
+.link-new:hover {
+    position: relative;
+}
+
+.link-new::before,
+.link-new::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link-new::before {
+    content: '';
+    /* show by default */
+}
+
+.link--metis--new::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform .7s;
+}
+
+.link--metis--new:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+    background: #000000;
+}
+
+
+/* .one-new:hover::after {
+    animation: transLinear .8s cubic-bezier(.25, .46, .45, .94);
+} */
+
+@keyframes transLinear {
+    0% {
+        width: 0;
+        opacity: 0.2;
+    }
+    100% {
+        width: 100%;
+        opacity: 1.2;
+    }
+}
+
+.news-section-title {
+    font-weight: 900;
+    font-size: 8.4em;
+    display: flex;
+    width: 100%;
+    font-family: cocbold;
+    margin-top: 3rem;
+    line-height: .8em;
+    text-transform: uppercase;
+}
+
+.news-section-title::before {
+    content: "";
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: 10px;
+    display: flex;
+    animation: transLinear 2.8s cubic-bezier(.25, .46, .45, .94);
+}
+
+@keyframes transLinear {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.get-in-touch-section-header {
+    font-weight: bolder;
+    font-size: 8.4rem;
+    text-transform: uppercase;
+    mix-blend-mode: darken !important;
+   
+    color: var(--main-text-color);
+    margin-top: 100px;
+    line-height: .8em;
+}
+
+.get-in-bold {
+    font-family: cocreg;
+    font-weight: 900 !important;
+    text-decoration: none;
+    color: #000;
+}
+
+.get-in-bold:hover {
+    font-family: cocreg;
+    font-weight: 100 !important;
+    overflow: hidden;
+}
+
+
+/* small desktop */
+
+@media (min-width:900px) and (max-width:1400px) {
+    .news-section-title {
+        font-size: 2.4em;
+    }
+    .get-in-touch-section-header {
+        font-size: 2.4em;
+    }
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: running; */
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.get-in-touch-section-social-media .social i {
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #00000000;
+    font-size: 2.3em;
+    font-family: cocreg;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--main-text-color);
+}
+
+.get-in-touch-section-social-media .social i:hover {
+    /* transform: scale(1.5); */
+    font-weight: 900;
+    color: var(--main-text-color);
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: var(--main-text-color);
+}
+
+.link {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    white-space: nowrap;
+    color: var(--color-text);
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+    /* show by default */
+}
+
+.link--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+
+/* mobile */
+
+@media (max-width:900px) {
+    .news-section-title {
+        font-size: 2.5em;
+    }
+    .get-in-touch-section {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column !important;
+        height: 100%;
+        width: 100%;
+    }
+    .get-in-touch-section-email {
+        margin-top: 50px;
+        width: 100% !important;
+    }
+    .get-in-touch-section-header {
+        font-size: 2.4em;
+    }
+    .get-in-touch-section-email {
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+    }
+    .one-new:hover .menu__item-img {
+        display: none;
+    }
+    .social i {
+        padding-top: 30px;
+        font-size: 0.7em !important;
+        color: #000 !important;
+        -webkit-text-stroke-width: 0px !important;
+        -webkit-text-stroke-color: var(--main-text-color) !important;
+    }
+}
+
+.new-expanded p a {
+    font-weight: 900;
+    text-decoration: underline;
+    color: #000;
+}
+
+.get-in-touch-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: auto;
+}
+
+.get-in-touch-section {
+    display: flex;
+    margin-top: 50px !important;
+    margin: 0 auto;
+    width: 100%;
+    transition: all 0.4s ease-in;
+}
+
+.get-in-touch-section-email {
+    margin-left: 19px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 30%;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    align-items: center;
+}
+
+.get-in-touch-section-email .submit {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 5px;
+    margin: 0 !important;
+    border-bottom: 2px solid #000;
+    flex-grow: 0.1;
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.get-in-touch-section-email input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #000;
+    font-family: cocreg;
+    font-weight: 900;
+    padding: 6px 2px;
+    display: flex;
+    flex-grow: 0.9;
+    outline: none;
+}
+
+.get-in-touch-section-social-media {
+    font-family: cocreg;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.get-in-touch-section-social-media p {
+    padding-bottom: 12px;
+}
+
+
+/* footer */
+
+.footer-section {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    /* border-top: 2px solid #000; */
+    justify-content: space-between;
+    padding: 10px 0px;
+    font-size: 0.7rem;
+}
+
+.footer-section .privacypolicypart {
+    font-family: cocreg;
+    font-weight: 100;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-section .meightpart {
+    font-family: cocreg;
+    font-weight: 100;
+}
+
+.footer-section .meightpart span {
+    font-family: cocreg;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* hover image news */
+
+.menu__item-img {
+    pointer-events: none;
+    position: absolute;
+    height: 20%;
+    opacity: 0;
+    left: 90%;
+    -webkit-transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
+}
+
+
+/* .one-new:hover .menu__item-img {
+    opacity: 1;
+    -webkit-transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+    -webkit-transition: all 0.4s;
+    transition: opacity 0.4s;
+} */

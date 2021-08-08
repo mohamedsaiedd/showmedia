@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+a {
+    text-decoration: none;
+}
+
+.card-list {
+    display: flex;
+    overflow-x: scroll;
+    opacity: 0;
+    padding-left: 10 !important;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: -2;
+}
+
+.card-list>article {
+    margin-left: -20px !important;
+    overflow-x: scroll;
+    border-radius: 0px;
+    opacity: 0.1 !important;
+}
+
+.card-list>article::after {
+    content: "";
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.card-list>article:hover {
+    filter: blur(0px) !important;
+    opacity: 1 !important;
+    transform: scale(1.2);
+}
+
+.card-list::-webkit-scrollbar {
+    background-color: #6b6b6b00;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: #00000000;
+}
+
+.magnet {
+    transition: transform .3s ease;
+}
+
+.card2 {
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    /* box-shadow: -1rem 0 3rem #000; */
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+    object-fit: cover;
+}
+
+.card2:focus-within~.card,
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card2:hover {
+    transform: translateY(-1rem);
+}
+
+.card2:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card-header {
+    margin-bottom: auto;
+}
+
+.card-author {
+    align-items: center;
+    position: relative;
+}
+
+.author-name {
+    opacity: 0;
+    margin-bottom: -6rem;
+    text-shadow: black 0px 0px 10px;
+}
+
+.card-list>article:hover .author-name {
+    grid-area: auto;
+    box-sizing: border-box;
+    color: white;
+    opacity: 1;
+    margin: 0;
+    transition: all 0.4s ease !important;
+}
+
+.card-list>article .card-header p {
+    font-size: 54px;
+    margin: 6rem 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    transition: margin 0.4s ease;
+}
+
+.card-list>article:hover .card-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-weight: 900;
+    opacity: 0;
+}
+
+.card-list>article:hover .author-name-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 40px;
+    opacity: 1;
+}
+
+.author-name-prefix {
+    opacity: 0;
+}
+
+
+.cards h2 {
+    padding-top: 20px;
+    color: #fff;
+}
+
+canvas {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    background: #0e0e0e
+}
+
+.card2 {
+    overflow: hidden !important;
+}
+
+nav::-webkit-scrollbar {
+    width: 0.40rem;
+}
+
+nav::-webkit-scrollbar-track {
+    background-color: #62626200;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: rgba(204, 132, 16, 0);
+}
+
+.card-list .card2:hover {
+    opacity: 1 !important;
+}
+
+.showin {
+    display: none;
+}
+
+.cursor2 img {
+    transition: all 0.4s ease !important;
+}
+
+
+/* cards  */
+
+.card2:nth-child(1) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(2) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(3) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(4) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(5):hover {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(6):hover {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(7):hover {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(8) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(9) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(10) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(11) {
+    background-size: cover;
+    width: 100%;
+}
+
+.card2:nth-child(12) {
+    background-size: cover;
+    width: 100%;
+}
+
+
+/* circle mouse dashed */
+
+.mouseCors {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    background-color: #ff880000;
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 1;
+    -webkit-animation: spin 9s linear infinite;
+    -moz-animation: spin 9s linear infinite;
+    animation: spin 9s linear infinite;
+    pointer-events: none;
+}
+
+
+/* 
+path {
+    position: fixed;
+    fill: tomato;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 1s linear 1s infinite alternate;
+    stroke: rgb(255, 255, 255);
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+} */
+
+.dragword {
+    margin: auto;
+    color: #fff;
+    font-weight: 800;
+}
+
+@-moz-keyframes spin {
+    100% {
+        transform-origin: center;
+        -moz-transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform-origin: center;
+        transform: rotate(0deg);
+    }
+    to {
+        transform-origin: center;
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* 
+.animatedbg {
+    position: absolute;
+    z-index: -10000 !important;
+}
+
+.animatedbg .row {
+    display: inline-block;
+    position: relative;
+    padding: 0% 0;
+    top: -2300px;
+    transform: rotate(-30deg);
+    white-space: nowrap;
+}
+
+.animatedbg img {
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.animatedbg img:hover {
+    filter: grayscale(0%);
+}
+
+.animatedbg .row div {
+    animation: animatedbg1 88s linear infinite;
+    animation-delay: -280s;
+}
+
+.animatedbg .row div:nth-child(2) {
+    animation: animatedbg2 80s linear infinite;
+    animation-delay: -140s;
+}
+
+.animatedbg .row div:nth-child(3) {
+    animation: animatedbg2 80s linear infinite;
+    animation-delay: 200s;
+    position: absolute;
+}
+
+@keyframes animatedbg1 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animatedbg2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(200%);
+    }
+} */
+
+canvas {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+}
+
+.author-name-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 40px;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.author-name {
+    grid-area: auto;
+    box-sizing: border-box;
+    color: white;
+    opacity: 1;
+    margin: 0 !important;
+    transition: all 0.4s ease !important;
+}
+
+.card-list>article {
+    opacity: 0.5 !important;
+    filter: grayscale(1);
+}
+
+.card-list>article:hover {
+    z-index: 99;
+    box-shadow: 17px 17px 98px 62px rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 17px 17px 98px 62px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: 17px 17px 98px 62px rgba(0, 0, 0, 0.81);
+    border-radius: 12px;
+}
+
+.card-list>article:hover .author-name {
+    grid-area: auto;
+    box-sizing: border-box;
+    color: white;
+    opacity: 1;
+    transition: all 0.4s ease !important;
+}
+
+.card-list>article .card-header p {
+    text-align: center;
+    transition: all 0.4s ease;
+    font-size: 100px;
+    text-shadow: black 0px 0px 10px;
+    margin: 7rem 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.card-list>article:hover .card-header p {
+    text-align: left;
+    opacity: 1;
+    margin: 0rem 1rem;
+}
+
+.card2:nth-child(1) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/kaza.jpg);
+}
+
+.card2:nth-child(2) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/king.jpg);
+}
+
+.card2:nth-child(3) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/zain.jpg);
+}
+
+.card2:nth-child(4) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/as3d.jpg);
+}
+
+.card2:nth-child(5) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/kaza.jpg);
+}
+
+.card2:nth-child(6) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/king.jpg);
+}
+
+.card2:nth-child(7) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/zain.jpg);
+}
+
+.card2:nth-child(8) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/as3d.jpg);
+}
+
+.card2:nth-child(9) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/kaza.jpg);
+}
+
+.card2:nth-child(10) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/king.jpg);
+}
+
+.card2:nth-child(11) {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../images/zain.jpg);
+}
+
+.card2:hover {
+    background-color: blanchedalmond;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .card-list>article {
+        box-shadow: 17px 17px 98px 62px rgba(0, 0, 0, 0.81);
+        -webkit-box-shadow: 17px 17px 98px 62px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 17px 17px 98px 62px rgba(0, 0, 0, 0.81);
+        border-radius: 12px;
+        filter: grayscale(0);
+        opacity: 1 !important;
+        margin-right: -20px !important;
+    }
+    .card-list>article:hover {
+        z-index: 9911;
+    }
+    .card-list>article .author-name {
+        grid-area: auto;
+        box-sizing: border-box;
+        color: white;
+        opacity: 1;
+        transition: all 0.4s ease !important;
+    }
+    .card-list>article .card-header p {
+        text-align: left !important;
+        opacity: 1;
+        margin: 0rem 0rem;
+    }
+}
+
+.backword {
+    pointer-events: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #000000);
+    z-index: 2 !important;
+}
+
+/* .backwordVideo #my-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    mix-blend-mode: screen;
+    object-fit: cover;
+    filter: grayscale(1);
+} */
+
+
+/* 
+@keyframes run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-140%);
+    }
+} */

@@ -28,7 +28,9 @@
     color: white;
     background: var(--main-text-color);
 }
-
+.preloader {
+    z-index: 999999999 !important;
+}
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -60,6 +62,26 @@ body {
     padding: 0 !important;
     
 }
+
+.frame__heading  {
+	margin: 1rem 0;
+	font-size: 1rem;
+	font-weight: 400;
+	z-index: 222222;
+	mix-blend-mode: difference;
+	right: 20px;
+	top: 20px;
+	
+}
+ .frame__heading2 {
+	margin: 1rem 0;
+	font-size: 1rem;
+	font-weight: 400;
+	z-index: 2222222;
+	mix-blend-mode: difference;
+	left: 20px;
+	top: 20px;
+ }
 
 .background {
     position: fixed;
@@ -213,7 +235,7 @@ nav {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: #9e7f54;
+    background: #000000;
     z-index: 1111
 }
 

@@ -181,7 +181,7 @@ a:focus {
     font-size: 13px;
     position: relative;
     top: 0px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: cocreg;
     display: inline-flex;
     justify-content: space-between;
@@ -330,7 +330,7 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--color-cover);
+    color: #fff;
     pointer-events: none;
     opacity: 0;
 }
@@ -338,15 +338,16 @@ a:focus {
 .strip-cover__title {
     font-family: cocreg;
     font-weight: 400;
-    font-size: 20vw;
+    font-size: 7rem !important;
     margin: 0;
     line-height: 1;
     text-align: center;
-    -webkit-text-stroke: 1px var(--color-cover);
-    text-stroke: 1px var(--color-cover);
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
-    color: transparent;
+    color: #fff;
+    
 }
 
 .strip-cover__subtitle {
@@ -409,7 +410,7 @@ a:focus {
 
 .content__item-title {
     font-weight: normal;
-    color: var(--color-content-title);
+    color:#fff;
 }
 
 .content__item-copy {
@@ -449,7 +450,6 @@ a:focus {
 .content__close:hover {
     color: #fff;
 }
-
 
 /* Will-change */
 
@@ -511,9 +511,9 @@ a:focus {
         text-align: right;
     }
     .strip-cover__title {
-        font-size: 15vw;
-        -webkit-text-stroke: 2px var(--color-cover);
-        text-stroke: 2px var(--color-cover);
+        font-size: 3rem;
+        -webkit-text-stroke: 2px #fff;
+        text-stroke: 2px #fff;
     }
     .strip-cover__subtitle {
         font-size: 3rem;
@@ -589,5 +589,8 @@ a:focus {
         bottom: -85%;
         width: 100%;
        
+    }
+    .strip-cover__title { 
+        font-size: 2rem !important;
     }
 }
